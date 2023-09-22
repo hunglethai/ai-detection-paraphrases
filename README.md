@@ -4,7 +4,7 @@
 [![arxiv](https://img.shields.io/badge/arXiv-2303.13408-b31b1b.svg)](https://arxiv.org/abs/2303.13408)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This is the official repository for our new [preprint](https://arxiv.org/pdf/2303.13408.pdf), "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense".
+This is the official repository for our [NeurIPS 2023 paper](https://arxiv.org/pdf/2303.13408.pdf), "Paraphrasing evades detectors of AI-generated text, but retrieval is an effective defense".
 
 ### Updates
 
