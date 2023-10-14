@@ -33,6 +33,11 @@ if args.retrieval_corpus == "pooled":
         f"{folder}/gpt3_davinci_003_300_len.jsonl_pp",
     ]
     assert args.output_file in corpora_files
+elif args.retrieval_corpus == "sharegpt":
+    corpora_files = [
+        args.output_file,
+        'open-generation-data/ShareGPT_longer_than_100_shorter_than_300.jsonl'
+    ]
 else:
     corpora_files = [args.output_file]
 
@@ -57,13 +62,15 @@ for op_file in corpora_files:
         else:
             gen_tokens = dd['gen_completion'][0]
         gen_tokens = gen_tokens.split()
-        gold_tokens = dd['gold_completion'].split()
 
         if len(gen_tokens) <= args.total_tokens:
             continue
 
-        if "paraphrase_outputs" not in dd:
+        if "paraphrase_outputs" not in dd and args.retrieval_corpus == "sharegpt":
+            gens_list.append(" ".join(gen_tokens))
             continue
+
+        gold_tokens = dd['gold_completion'].split()
 
         pp0_tokens = dd['paraphrase_outputs'][args.paraphrase_type]['output'][0].split()
         pp_target_tokens = dd['paraphrase_outputs']['lex_40_order_100']['output'][0].split()

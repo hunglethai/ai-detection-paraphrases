@@ -8,6 +8,7 @@ This is the official repository for our [NeurIPS 2023 paper](https://arxiv.org/p
 
 ### Updates
 
+* (Oct 2023) We have added a new setting to utilize the ShareGPT corpus in retrieval-based detection experiments. In [`dipper_paraphrases/detect_retrieval.py`](dipper_paraphrases/detect_retrieval.py), use the flag `--retrieval_corpus sharegpt`.
 * (May 2023) The training data for DIPPER is now available [here](https://storage.googleapis.com/gresearch/dipper/dipper-training-data.zip)!
 * (May 2023) The non-contextual ablated version of DIPPER (Section 6.1 of paper) is now available on the HuggingFace model hub! ([link](https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl-no-context))
 * (April 2023) We have now released our paraphraser DIPPER on the HuggingFace model hub ([link](https://huggingface.co/kalpeshk2011/dipper-paraphraser-xxl))!
