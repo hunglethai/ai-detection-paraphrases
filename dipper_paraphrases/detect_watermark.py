@@ -101,7 +101,7 @@ for idx, dd in tqdm.tqdm(enumerate(data), total=num_paraphrase_pts):
 
     if cache1 or cache2 or cache3:
         # save cache
-        with open(args.watermark_cache, "w") as f:
+        with open(args.detector_cache, "w") as f:
             json.dump(cache, f)
 
 stats = get_roc(acc_gold, acc_gen)
