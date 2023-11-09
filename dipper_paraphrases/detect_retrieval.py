@@ -138,4 +138,4 @@ plot2 = get_roc(human_detect, generation_detect)
 print_tpr_target(plot2[0], plot2[1], "generation", args.target_fpr)
 
 with open("roc_plots/s2_sim.pkl", 'wb') as f:
-    pickle.dump((plot1, plot1), f)
+    pickle.dump((plot1, plot2), f)
